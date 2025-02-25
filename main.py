@@ -27,6 +27,20 @@ circle_thickness = 0
 def draw_line(surface, color, start_pos, end_pos, thickness):
     pygame.draw.line(surface, color, start_pos, end_pos, thickness)
 
+def draw_polygon(screen, color, points, thickness=0):
+    pygame.draw.polygon(screen, color, points, thickness)
+
+points5 = [
+    (300, 100),
+    (400, 350), 
+    (350, 400),  
+    (450, 400),  
+    (500, 250)   
+]
+
+thickness = 0
+    
+
 
 def handle_events ():
     for event in pygame.event.get():
@@ -51,6 +65,7 @@ def main():
         draw_rectangle(screen, my_rect1, config.AQUAMARINE, thickness1)
         draw_circle(screen, circle_center, circle_radius, circle_color, circle_thickness)
         draw_line(screen, config.FIREBRICK, [200,300], [777,666], 4)
+        draw_polygon(screen, config.LAVENDERPURPLE, points5, thickness)
 
         pygame.display.flip()
 
