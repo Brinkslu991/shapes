@@ -27,18 +27,19 @@ circle_thickness = 0
 def draw_line(surface, color, start_pos, end_pos, thickness):
     pygame.draw.line(surface, color, start_pos, end_pos, thickness)
 
-def draw_polygon(screen, color, points, thickness=0):
+def draw_polygon(screen, color, points, thickness):
     pygame.draw.polygon(screen, color, points, thickness)
 
 points5 = [
-    (300, 100),
-    (400, 350), 
-    (350, 400),  
-    (450, 400),  
-    (500, 250)   
+    (600, 100),
+    (700, 450), 
+    (550, 700),  
+    (650, 460),  
+    (500, 650),
+    (525, 400)
 ]
 
-thickness = 0
+thickness = 10
     
 
 
